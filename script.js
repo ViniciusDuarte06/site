@@ -1,4 +1,8 @@
-// Exemplo simples: alerta de boas-vindas
-window.onload = function () {
-  alert("Bem-vindo ao meu portfólio!");
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("nav ul li a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      alert(`Você clicou em: ${link.textContent}`);
+    });
+  });
+});
